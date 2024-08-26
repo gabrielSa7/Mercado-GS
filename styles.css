@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -26,10 +26,14 @@ header {
     background-color: #D7901F;
     border: none;
     color: white;
-    padding: 10px;
+    width: 168px;
+    height: 62px;
     margin-right: 10px;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chat-button {
@@ -37,21 +41,26 @@ header {
 }
 
 .cart-button {
-    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    background-color: yellow;
+    color: black;
+    border-bottom: 2px solid blue;
     font-size: 20px;
-    color: #000;
 }
 
 .search-bar {
-    flex-grow: 1;
     display: flex;
     align-items: center;
+    width: 737px;
+    height: 46px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .search-bar input {
-    flex-grow: 1;
+    width: 100%;
+    height: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
@@ -59,22 +68,56 @@ header {
 }
 
 .search-bar .search-button {
+    width: 40px;
+    height: 46px;
     background-color: #D7901F;
     border: none;
-    padding: 10px;
-    border-radius: 0 5px 5px 0;
     cursor: pointer;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo img {
-    height: 50px;
+    width: 174px;
+    height: 111px;
 }
 
 .slideshow {
     background-color: #ccc;
-    height: 300px;
-    margin: 20px 0;
+    width: 358px;
+    height: 169px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideshow .prev, .slideshow .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.slideshow .prev {
+    left: -20px;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #ffffff transparent transparent;
+}
+
+.slideshow .next {
+    right: -20px;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #ffffff;
 }
 
 .products-grid {
@@ -91,9 +134,11 @@ header {
     text-align: center;
 }
 
-.product p {
-    color: #D7DFD7;
+.product .description {
+    background-color: #D7DFD7;
+    padding: 10px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .product button {
@@ -111,12 +156,17 @@ header {
 }
 
 .pagination button {
-    background-color: #ccc;
+    background-color: #D9D9D9;
     border: none;
     padding: 10px 15px;
     margin: 0 5px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50px;
+}
+
+.pagination button.active {
+    background-color: #2DA4A5;
+    color: white;
 }
 
 .pagination button:hover {
