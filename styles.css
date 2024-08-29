@@ -43,9 +43,9 @@ header {
 .cart-button {
     width: 45px;
     height: 45px;
-    background-color: yellow;
+    background-color: white;
     color: black;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid white;
     font-size: 20px;
 }
 
@@ -69,8 +69,8 @@ header {
 
 .search-bar .search-button {
     width: 40px;
-    height: 46px;
-    background-color: #D7901F;
+    height: 70px;
+    background-color: #D7DFD7;
     border: none;
     cursor: pointer;
     color: white;
