@@ -11,77 +11,77 @@
         <div class="top-bar">
             <div class="buttons">
                 <button class="login-button">Login</button>
-                <button class="chat-button">Chat</button>
-                <button class="cart-button"><img src="carrinho.png" alt=""></button>
+                <button id="chatButton" class="chat-button">Chat</button> <!-- Botão de chat -->
+                <button class="cart-button"><img src="carrinho.png" alt="Carrinho de compras"></button>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="O que está procurando? Digite aqui..." />
-                <button class="search-button"><img src="lupa.png" alt=""></button>
+                <button class="search-button"><img src="lupa.png" alt="Buscar"></button>
             </div>
             <div class="logo">
                 <img src="logo.png" alt="Logo da Marca">
             </div>
         </div>
     </header>
-    
+
     <main>
         <div class="slideshow">
-            <img src="slide1.png" alt="">
+            <img src="slide1.png" alt="Slide 1">
             <div class="prev">&#9664;</div>
             <div class="next">&#9654;</div>
         </div>
         <div class="products-grid">
             <div class="product">
-                <img src="tv.png" alt="">
+                <img src="tv.png" alt="Smart TV 32’’ LG">
                 <div class="description">
                     <p>Smart TV 32’’ LG por apenas R$ 1599,00</p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
-                <img src="camisa.png" alt="">
+                <img src="camisa.png" alt="Camisa Polo Masculina">
                 <div class="description">
                     <p>Camisa Polo Masculina por apenas R$ 49,99</p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
-                <img src="bicicleta.png" alt="">
+                <img src="bicicleta.png" alt="Bicicleta Aro 29 Ravok">
                 <div class="description">
                     <p>Bicicleta Aro 29 Ravok 21v Aço Carbono Freios a Disco, por apenas R$ 799,00</p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
-                <img src="computador.png" alt="">
+                <img src="computador.png" alt="Computador i5, 16 G RAM">
                 <div class="description">
                     <p>Computador i5, 16 G RAM, completo por apenas R$ 2.399,99</p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
-                <img src="Mesa.png" alt="">
+                <img src="mesa.png" alt="Mesa de Computador Byte">
                 <div class="description">
                     <p>Mesa de Computador Byte Escrivaninha 2 Gavetas Valdemóveis R$ 299,99</p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
-                <img src="geladeira.png" alt="">
+                <img src="geladeira.png" alt="Geladeira Brastemp">
                 <div class="description">
                     <p>Geladeira Brastemp Frost Free Duplex 375 litros com Compartimento R$ 2499,00</p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
-                <img src="ratoeira.png" alt="">
+                <img src="ratoeira.png" alt="Ratoeira Gaiola de Arame">
                 <div class="description">
                     <p>Ratoeira Gaiola de Arame N2 Eldorado R$ 29,99</p>
                 </div>
                 <button>Comprar</button>
             </div>
             <div class="product">
-                <img src="calça.png" alt="">
+                <img src="calça.png" alt="Calça Jeans Feminina">
                 <div class="description">
                     <p>Calça Jeans Feminina com Brilho Premium R$ 69,00</p>
                 </div>
@@ -95,7 +95,12 @@
             <button>4</button>
         </div>
     </main>
+
+    <script>
+        // Redirecionamento para a página de chat
+        document.getElementById('chatButton').addEventListener('click', function() {
+            window.location.href = 'chat.html'; // Nome da página de chat
+        });
+    </script>
 </body>
 </html>
-eu quero colocar uma imagem no lugar do carrinho ,pois essa imagem é idêntica ao ao botão do protótipo.
-Deixe a barra de p 

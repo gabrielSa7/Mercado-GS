@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Cabeçalho do chat */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D7901F;
+    padding: 15px;
+    color: white;
+}
+
+.chat-header .logo img {
+    width: 150px;
+}
+
+.chat-title p {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Corpo do chat */
+.chat-body {
+    padding: 20px;
+    height: calc(100vh - 150px); /* Ajuste para que o rodapé fique sempre visível */
+    overflow-y: auto;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+}
+
+.message.left {
+    justify-content: flex-start;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.bubble {
+    background-color: #D7DFD7;
+    border-radius: 20px;
+    padding: 15px;
+    max-width: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    position: relative;
+}
+
+.bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #D7DFD7 transparent transparent;
+    transform: translateY(-50%);
+}
+
+/* Rodapé do chat */
+.chat-footer {
+    background-color: #F5F5F5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-footer input {
+    width: 90%;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}

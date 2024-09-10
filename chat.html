@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado GS - Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Centraliza o logo */
+        .logo-chat {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Espaço acima da imagem */
+        }
+
+        .logo-chat img {
+            max-width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+        }
+
+        /* Faixa no topo */
+        .chat-bar {
+            background-color: #E77B33;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px; /* Espaço entre a imagem e a listra */
+        }
+
+        /* Estilos do conteúdo de chat */
+        .chat-container {
+            margin: 20px auto;
+            max-width: 600px; /* Centraliza o conteúdo de chat */
+        }
+
+        .chat-message {
+            background-color: #D7DFD7;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px 0;
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .chat-message.user {
+            background-color: #f1f1f1;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .chat-avatar {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        .chat-avatar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .chat-bubble {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 70%;
+        }
+
+        .chat-input {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .chat-input input {
+            padding: 10px;
+            width: 80%;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .chat-input button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #2DA4A5;
+            color: white;
+            border-radius: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .chat-input button:hover {
+            background-color: #248e8e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centraliza o logo -->
+    <div class="logo-chat">
+        <img src="logo.png" alt="Logo da Marca">
+    </div>
+
+    <!-- Faixa com nome "Chat" centralizado -->
+    <div class="chat-bar">
+        Chat
+    </div>
+
+    <div class="chat-container">
+        <!-- Exemplo de mensagens de chat -->
+        <div class="chat-message">
+            <div class="chat-avatar">
+                <img src="avatar1.png" alt="Avatar">
+            </div>
+            <div class="chat-bubble">
+                <p>Olá, seja bem-vindo à nossa loja, Caro Cliente.</p>
+            </div>
+        </div>
+        <div class="chat-message">
+            <div class="chat-avatar">
+                <img src="avatar1.png" alt="Avatar">
+            </div>
+            <div class="chat-bubble">
+                <p>Como podemos te ajudar?</p>
+            </div>
+        </div>
+        
+        <!-- Exemplo de campo de entrada para enviar mensagem -->
+        <div class="chat-input">
+            <input type="text" placeholder="Inicie uma conversa...">
+            <button>Enviar</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,183 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #fff; /* Fundo branco */
     margin: 0;
     padding: 0;
 }
-
-header {
-    background-color: #fff;
-    padding: 10px;
-}
-
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    flex-wrap: wrap;/**/
-}
-
-.buttons {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Adicionado para dar espaço em telas menores */
-}
-
-.login-button, .chat-button, .cart-button {
-    background-color: #D7901F;
-    border: none;
-    color: white;
-    width: 168px;
-    height: 62px;
-    margin-right: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chat-button {
-    background-color: #2DA4A5;
-}
-
-.cart-button {
-    width: 45px;
-    height: 45px;
-    background-color: white;
-    color: black;
-    border-bottom: 2px solid white;
-    font-size: 20px;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    width: 737px;
-    height: 46px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.search-bar input {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    background-color: #D7DFD7;
-}
-
-.search-bar .search-button {
-    width: 40px;
-    height: 70px;
-    background-color: #D7DFD7;
-    border: none;
-    cursor: pointer;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo img {
-    width: 174px;
-    height: 111px;
-}
-
-.slideshow {
-    background-color: #ccc;
-    width: 358px;
-    height: 169px;
-    position: relative;
-    margin: 20px auto;
-}
-
-.slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slideshow .prev, .slideshow .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    cursor: pointer;
-}
-
-.slideshow .prev {
-    left: -20px;
-    border-width: 20px 20px 20px 0;
-    border-color: transparent #ffffff transparent transparent;
-}
-
-.slideshow .next {
-    right: -20px;
-    border-width: 20px 0 20px 20px;
-    border-color: transparent transparent transparent #ffffff;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.product {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-.product .description {
-    background-color: #D7DFD7;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.product button {
-    background-color: #2DA4A5;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.pagination {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.pagination button {
-    background-color: #D9D9D9;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 50px;
-}
-
-.pagination button.active {
-    background-color: #2DA4A5;
-    color: white;
-}
-
-.pagination button:hover {
-    background-color: #999;
-}
-/*responsividade*/
-
-
-
 
 header {
     background-color: #fff;
@@ -195,7 +21,30 @@ header {
 .buttons {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Adicionado para dar espaço em telas menores */
+    margin-bottom: 10px; /* Espaço entre os botões em telas menores */
+}
+
+.login-button, .chat-button, .cart-button {
+    background-color: #D7901F;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 168px;
+    height: 62px;
+}
+
+.chat-button {
+    background-color: #2DA4A5;
+}
+
+.cart-button {
+    background-color: yellow;
+    color: blue;
+    width: 45px;
+    height: 45px;
 }
 
 .search-bar {
@@ -242,6 +91,23 @@ header {
     position: relative;
 }
 
+.slideshow .prev, .slideshow .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.slideshow .prev {
+    left: -30px;
+}
+
+.slideshow .next {
+    right: -30px;
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -249,14 +115,123 @@ header {
     padding: 20px;
 }
 
+.product {
+    background-color: transparent; /* Remove fundo */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product p {
+    background-color: #D7DFD7; /* Retângulo com a cor D7DFD7 */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%; /* Largura fixa */
+    min-height: 60px; /* Altura mínima consistente */
+    box-sizing: border-box;
+    color: #000;
+}
+
+.product button {
+    background-color: #2DA4A5;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: #D9D9D9;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.pagination button.active {
+    background-color: #2DA4A5;
+    color: white;
+}
+
 @media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        margin-bottom: 10px;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo img {
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
 
 @media (max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login-button, .chat-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input, .search-bar .search-button {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .slideshow {
+        max-width: 100%;
+    }
+
     .products-grid {
         grid-template-columns: 1fr;
+    }
+
+    .pagination button {
+        display: inline-block;
+        margin: 5px 0;
     }
 }
