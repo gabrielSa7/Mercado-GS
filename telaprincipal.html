@@ -10,7 +10,7 @@
     <header>
         <div class="top-bar">
             <div class="buttons">
-                <button class="login-button">Login</button>
+                <button id="loginButton" class="login-button">Login</button> 
                 <button id="chatButton" class="chat-button">Chat</button> <!-- Botão de chat -->
                 <button class="cart-button"><img src="carrinho.png" alt="Carrinho de compras"></button>
             </div>
@@ -101,6 +101,12 @@
         document.getElementById('chatButton').addEventListener('click', function() {
             window.location.href = 'chat.html'; // Nome da página de chat
         });
+
+         // Redirecionamento para a página de login
+         document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Nome da página de login
+        });
+
     </script>
 </body>
 </html>
