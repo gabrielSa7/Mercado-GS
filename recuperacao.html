@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="recuperacao.css">
+</head>
+<body>
+    <div class="recovery-container" id="step1">
+        <img src="logo.png" alt="Mercado GS" class="logo">
+        <div class="header-bar">
+            <span>Recupere sua senha</span>
+        </div>
+        <form id="formStep1">
+            <label for="email">Email ou celular:</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu email ou celular" required>
+            <button type="button" onclick="goToStep(2)">Confirmar</button>
+        </form>
+    </div>
+
+    <div class="recovery-container" id="step2" style="display: none;">
+        <img src="logo.png" alt="Mercado GS" class="logo">
+        <div class="header-bar">
+            <span>Recupere sua senha</span>
+        </div>
+        <form id="formStep2">
+            <p>Digite o código enviado para seu email ou celular</p>
+            <label for="code">Código:</label>
+            <input type="text" id="code" name="code" placeholder="Digite o código" required>
+            <label for="new-password">Digite uma nova senha:</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Nova senha" required>
+            <label for="confirm-password">Confirme a nova senha:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua nova senha" required>
+            <button type="button" onclick="goToStep(3)">Confirmar</button>
+        </form>
+    </div>
+
+    <div class="recovery-container" id="step3" style="display: none;">
+        <img src="logo.png" alt="Mercado GS" class="logo">
+        <div class="header-bar">
+            <span>Recupere sua senha</span>
+        </div>
+        <form id="formStep3">
+            <p class="success-message">Sua senha foi alterada com sucesso!</p>
+            <button type="button" onclick="window.location.href='telaprincipal.html';">Voltar para página inicial</button>
+        </form>
+    </div>
+
+    <script>
+        // Função para exibir a próxima etapa e ocultar a atual
+        function goToStep(step) {
+            // Oculta todas as etapas
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'none';
+
+            // Exibe a etapa correspondente
+            document.getElementById('step' + step).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

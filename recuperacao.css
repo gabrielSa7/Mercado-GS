@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3F3F3; /* Fundo claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.recovery-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Largura ajustada */
+    text-align: center;
+    border-top: 5px solid #E77B33; /* Linha laranja abaixo do logo */
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.header-bar {
+    background-color: #E77B33; /* Cor da faixa laranja */
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #D7DFD7; /* Cor de fundo das caixas de texto */
+}
+
+button {
+    background-color: #2DA4A5; /* Cor verde-água para os botões */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #23898e;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    color: #2DA4A5; /* Cor verde para mensagem de sucesso */
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .recovery-container {
+        width: 90%;
+    }
+}
